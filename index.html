@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码清洗</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="code-editor">
+            <pre class="highlight-layer"><code id="highlighted-code" class="hljs"></code></pre>
+            <textarea id="code-input" class="input-layer" spellcheck="false" placeholder="粘贴代码到此处..."></textarea>
+        </div>
+        <div class="scheme-bar">
+            <div class="scheme-tags" id="scheme-tags"></div>
+            <button class="add-scheme-btn" id="add-scheme-btn">+ 添加方案</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <h3 id="modal-title">添加清洗方案</h3>
+            <div class="form-group">
+                <label>方案名称</label>
+                <input type="text" id="scheme-name" placeholder="输入方案名称">
+            </div>
+            <label class="rules-label">替换规则</label>
+            <div class="rules-list" id="rules-list"></div>
+            <button class="add-rule-btn" id="add-rule-btn">+ 添加规则</button>
+            <div class="modal-actions">
+                <button class="btn-cancel" id="btn-cancel">取消</button>
+                <button class="btn-save" id="btn-save">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
